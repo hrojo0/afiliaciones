@@ -21,4 +21,13 @@ To access the app you have to be registered in the database as a user, it has 7 
  - Responsable de zona, each demarcación can separate by zones to improve the distribution of people so this users only can access to the information of them.
  - Promotor, is the lowest level in the app, this user can only view and manage the registers assigned.
 
+## Maps section
+To display the maps the Maps JavaScript API is used and is separated by two categories:
+ - Markers map, is optimized to use the information in the database such as the location (latitude and longitude), name, address, and if is affiliate or not. It use custom makers for easy viewing of the affiliates that are red and gray the ones are not affiliate.
+ - Heatmap, is made to view the influence of the register and where to improve data collection.
+Both maps got the possibility to filter the data by affiliates, age range, sex, electoral area, municipality and more.
+
+ ## List section
+ There are two categories of list the registers, affiliates and no affiliates. Each one has the possibility to filter the data by name, age range, sex, electoral area, municipality and more. Also the tables works as usual where can order the data by column and export, print, and save buttons for easy sharing. 
+
 The web app is made with PHP, JQuery, AJAX, Maps JavaScript API, connection to a MySQL database where is defined trough a config.php file with basic information of the databse which is required in the conexion_db.php file.

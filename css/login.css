@@ -1,0 +1,39 @@
+.cont{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background: var(--bg-color);
+    justify-content: center;
+    align-items: center;
+}
+.cont .form-login{
+    position: relative;
+    display: flex;
+    padding: var(--padding-box);
+    background-color: var(--popup-bg-color);
+    border-radius: .3rem;
+    box-shadow: 0 0 1rem black;
+    width: 400px;
+}
+.cont .form-login .login-form{
+    width: 100% 
+}
+.cont .form-login .form__icon{
+    position: relative;
+    top:-7rem;
+    text-align: center;
+    
+}
+.cont .form-login .form__icon i{
+    font-size: 6rem;
+    color: var(--popup-bg-color);
+}
+
+#title_login{
+    position: absolute;
+    font-size:4rem;
+    color: var(--popup-bg-color);
+    font-weight: 800;
+    width: 100%;
+}

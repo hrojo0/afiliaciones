@@ -1,0 +1,87 @@
+.todo{
+    top: 0;
+}
+.todo .cont{
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.filtros{
+    text-align: center;
+}
+.form__div{
+    display: inline-block;
+}
+.form__input{
+}
+#seccion{
+    line-height: 1rem;
+}
+.form__label{
+    position: absolute; 
+    left: .25rem;
+    top: .75rem;
+    padding: 0 .25rem;
+    background: var(--bg-body-color);
+    color: var(--gray-color);
+    font-size: var(--normal-font-size);
+    transition: .2s;
+}
+
+.form__label{
+    color: var(--gray-color);   
+}
+
+/* BOTON FILTRO! */
+.form__button{
+    padding: .7rem 1rem;
+    display: inline-block;
+    transform: translateY(-.2rem);
+
+}
+.form__button i{
+    margin-right: 0;
+}
+
+/*input number sin indicadores*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+/******************************/
+.cont_map{
+    position: relative;
+    width: 100%;
+}
+#mapa{
+    width: 100%;
+    height: 800px;
+}
+
+.infom_no, .infom_si{
+    font-weight: 800;
+}
+.infom_no{
+    color: var(--error-color);
+}
+.infom_si{
+    color: var(--green-color);
+}
+
+
+/****************************************************************************************/
+/***************                        RESPONSIVE                        ***************/
+/****************************************************************************************/
+@media only screen and (max-width: 900px){
+    .filtros{
+        margin-left: 7rem;
+    }
+    .filtros #seccion{
+        width: 5rem;
+    }
+}

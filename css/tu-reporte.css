@@ -1,0 +1,812 @@
+.todo{}
+
+.todo .cont{
+    display: block;
+    min-height: calc(100vh - 4rem);
+    top: 0;
+    text-align: center;
+    position: relative;
+}
+.control{
+    display: inline-block;
+    position: relative;
+}
+
+.form__div{
+    display: inline-block;
+}
+.form__input{
+}
+#seccion{
+    line-height: 1rem;
+}
+.form__label{
+    position: absolute; 
+    left: .25rem;
+    top: .75rem;
+    padding: 0 .25rem;
+    background: var(--bg-body-color);
+    color: var(--gray-color);
+    font-size: var(--normal-font-size);
+    transition: .2s;
+}
+
+.form__label{
+    color: var(--gray-color);   
+}
+.div__nombre{
+    min-width: 50%;
+}
+#nombre{
+    padding: 0.5rem 0.5rem 0.3rem 0.5rem;
+}
+.label__nombre{
+    top: .4rem;
+}
+/* BOTON FILTRO! */
+.form__button{
+    padding: .7rem 1rem;
+    display: inline-block;
+    transform: translateY(-.2rem);
+
+}
+.form__button i{
+    margin-right: 0;
+}
+
+/*input number sin indicadores*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+/******************************/
+
+/** TABLA!! **/
+.table__div{
+    overflow: scroll;
+    overflow-y: hidden;
+}
+.table{
+    border-collapse: collapse;
+    table-layout: fixed;
+    border-bottom: 2px solid var(--first-color);
+    border-radius: .5rem;
+}
+/*.table__head*/thead{   
+    background-color:  var(--first-color);
+    line-height: 1.5rem;
+    color: #fff;
+    display:tabl;
+}
+.table__head tr{
+    
+}
+.table__head tr th{
+    padding: .5rem;
+    border-left: 2px solid var(--bg-body-color);
+}
+.table .row__person:nth-child(even) {
+    background: #eaeaea;
+}
+.table .row__person:nth-child(even) td{
+    border-left: 2px solid var(--bg-body-color);
+}
+.table .row__person:nth-child(odd) td{
+    border-left: 2px solid #eaeaea;
+}
+.table .row__person:nth-child(odd) .t_contador{
+    border-left: none;
+}
+.table .row__person:nth-child(odd):hover td, .table .row__person:nth-child(even):hover td{
+    border-left: 2px solid var(--yellow-color);
+}
+.table .row__person:hover{
+    background: var(--yellow-color);
+    cursor: pointer;
+}
+.table .row__person td{
+    padding: .7rem .5rem;   
+}
+.row__person a, .info_persona a{
+    text-decoration: none;
+    color: var(--first-color);
+    font-weight: 600;
+}
+.row__person a:hover, .info_persona a:hover{
+    color: #dc2c18;
+}
+
+.t_nombre, .t_apellidos, .t_calle, .t_colonia{
+    text-align: left
+}
+.t_contador{
+    font-weight: 600;
+    color: var(--first-color)
+}
+.t_capi{
+    text-transform: capitalize;
+}
+.t_celular, .t_telefono, .t_calle{
+    font-weight: 600;
+}
+/***** ERROR EN BUSQUEDA *****/
+.filter__error{
+    color: var(--gray-color);
+    text-align: center;
+    font-weight: 300;
+}
+.filter__error i{
+    font-size: 7rem;
+    color: var(--input-color)
+}
+.filter__error p{
+    font-size: 2rem;
+    margin-bottom: .5rem;
+}
+
+
+#myTable_wrapper{
+    overflow: auto;
+}
+
+#myTable_filter{
+    display: none
+}
+
+
+div.dt-container .dt-paging .dt-paging-button.current, div.dt-buttons>.dt-button{
+    background: var(--first-color) !important;
+    color: white !important;
+    font-weight: 600 !important;
+}
+
+div.dt-container .dt-paging .dt-paging-button:hover, div.dt-container .dt-paging .dt-paging-button.current:hover, div.dt-buttons>.dt-button:hover{
+    background: var(--orange-color) !important;
+    border: 1px solid var(--orange-color) !important;
+    color: white !important;
+}
+
+table.dataTable.display>tbody>tr{
+    text-transform: capitalize
+}
+
+
+table.dataTable.display>tbody>tr:hover{
+    background: #f2d8d8 !important;
+}
+
+table.dataTable.display>tbody>.promovido__especial{
+    background: #adf55b !important;
+}
+table.dataTable.display>tbody>.promovido__especial:hover{
+    background: #8cdc32 !important;
+}
+
+table.dataTable.display>tbody>tr>td{
+    text-align: center
+}
+/***** INFO POPUP PERSONAS ****/
+.info_persona{
+    position: fixed;
+    display: flex;
+    background: rgba( 0, 0, 0, 0.514 );
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+.info_persona .cont_info{
+    background: var(--bg-body-color);
+    display: inline-block;
+    padding: 1.5rem;
+    position: relative;
+    border-radius: .4rem;
+    box-shadow: 0 0 .5rem rgba(0,0,0,0.7);
+    width: 60%
+}
+.info_persona #close_info{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.5rem;
+    transform: translate(50%, -50%);
+    cursor: pointer;
+    border-radius: 2rem;
+    border: .3rem solid #fff;
+    background-color: #fff;
+}
+.info_persona #close_info:hover{
+    color: var(--error-color)
+}
+
+.datos_persona{
+    position: relative;
+    margin-bottom: 1rem;
+    padding-right: .7rem;
+    margin-right: .4rem;
+    display: inline-block;
+    text-align: left;
+}
+#datos_persona h2{
+    margin-bottom: 1rem;
+    color: var(--first-color);
+}
+
+.datos_persona label{
+    left: 0rem;
+    top: 0rem;
+    padding: .1rem .5rem;
+    background: var(--first-color);
+    color: #fff;
+    font-size: var(--small-font-size);
+    font-weight: 600;
+    font-style: normal;
+}
+.datos_persona p{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: var(--normal-font-size);
+    border-radius: .3rem;
+    outline: none;
+    padding: .4rem .5rem 0rem 0rem;
+    background: none;
+    z-index: 1;
+}
+
+#info_cve, #info_curp, #info_rfc{
+    text-transform: uppercase
+}
+
+#info_nombre_persona, #info_promotor{
+    text-transform: capitalize;
+}
+
+/* BOTONES EDICION REGISTROS */
+.btns_persona{
+    display: flex;
+    justify-content: center;
+    margin-top: .5rem;
+}
+#editar_persona, #delete_persona{
+    display: flex; 
+    margin: 0 1rem;
+    align-content: center;
+    justify-content: center;
+}
+.fa-save{
+    font-size: 
+}
+#editar_persona:hover{
+    background: #a34600;
+}
+#delete_persona:hover{
+    background: #a20000;
+}
+#delete_default, #delete_confirmar{
+    display: flex;
+ 
+}
+#delete_persona i, #editar_persona i{
+    margin-right: .3rem
+}
+#editar_persona{
+    background: var(--orange-color)
+}
+#delete_persona{
+    background: var(--error-color)
+}
+.fa-square-xmark, .fa-square-check{
+    font-size: 1.5rem;
+    margin-left: .5rem;
+}
+.fa-square-xmark:hover{
+    color: var(--border-color);
+    box-shadow: 0 0 5px rgba( 0, 0, 0, 0.573 )
+}
+.fa-square-check:hover{
+    color: var(--yellow-color);
+    box-shadow: 0 0 5px rgba( 0, 0, 0, 0.573 )
+}
+
+/* NOTIFIACION BORRADO */
+.notificacion_borrado{
+    display: flex;
+    justify-content: center;
+}
+.notificacion_borrado .borrado_success, .notificacion_borrado .borrado_error{
+    background: var(--error-color);
+    color: #fff;
+    display: flex;
+    padding: .5rem 1.5rem;
+    border-radius: .4rem;
+    margin-bottom: 1rem;
+}
+.notificacion_borrado .borrado_error{
+    background: var(--gray-color);
+}
+.notificacion_borrado .borrado_success p, .notificacion_borrado .borrado_error p{
+    margin-left: .5rem;
+    font-weight: 600;
+}
+
+/* BOTONES PAGINADO */
+.pagination{
+    display: inline-block;
+    padding-left: 0;
+    margin: 20px 0;
+    border-radius: 4px;
+    text-align: center;
+    list-style-type: none;
+    
+}    
+.pagina{
+    float: left;    
+    padding: .5rem .7rem;
+    background: #d3d3d3;
+    margin-left: .3rem;
+    color: var(--first-color);
+    border-radius: .3rem
+}
+.active{
+    font-weight: 600;
+    color: #fff;
+    background: var(--first-color);
+}
+.pagina:hover{
+    background: var(--orange-color);
+    cursor: pointer;
+    color: #fff;
+    font-weight: 600;
+}
+
+#tabla_personas {
+    transform: rotateX(180deg);
+    overflow-x: auto;
+}
+.filter__error {
+    transform: rotateX(180deg);
+}
+.table {
+    transform: rotateX(180deg);
+    margin: 0 auto;
+}
+
+#form__div__nombre_mod, #form__div__aps_mod, #form__div__oldpass_mod, #form__div__newpass_mod, #form__div__newpasscheck_mod{
+    display: block;
+}
+#form__div__nombre_mod .form__input, #form__div__aps_mod .form__input, #form__div__oldpass_mod .form__input, #form__div__newpass_mod .form__input, #form__div__newpasscheck_mod .form__input{
+    width: 100%;
+}
+
+tbody tr{
+    cursor: pointer
+}
+tbody tr:hover{
+    transition: 0.2s;
+}
+
+.fa-whatsapp{
+    background: var(--first-color);
+    color: #fff;
+    padding: .5rem 1rem;
+    border-radius: .4rem;
+    transition: 0.2s;
+}
+.fa-whatsapp:hover{
+    background: var(--first-color-hover);
+    color: #e8e7e7
+}
+
+#loadingIndicator{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#loadingIndicator #loadingImg{
+    background: red;
+    background: var(--first-color);
+    color: white;
+    padding: 15px 15px;
+    background-image: url(https://raw.githubusercontent.com/niklausgerber/PreLoadMe/master/img/status.gif);
+}
+
+#loadingIndicator #loadingTxt{
+    margin-left: .5rem;
+    font-size: 1.2rem
+}
+#nombre{
+    cursor: pointer
+}
+#buscador__cont{
+    max-width: 20rem;
+    min-width: 15rem;
+    text-align: left;
+    margin-top: .3rem;
+    border: 1px solid var(--border-color);
+    border-radius: .3rem;
+    position: absolute;
+    background: var(--bg-body-color);
+    z-index: 999;
+    box-shadow: 2px 2px 2px #2d2d2d99
+}
+#lista__promotores{
+    list-style: none;
+}
+.elemento_lista_promotores {
+    padding: 0.5rem;
+    border-radius: 0rem;
+    border: 0px;
+}
+
+.elemento_lista_promotores:hover{
+    background: var(--input-color);
+    color: #fff;
+    cursor: pointer;
+}
+
+
+/****************************************************************************************/
+/***************                        RESPONSIVE                        ***************/
+/****************************************************************************************/
+@media only screen and (max-width: 900px){
+    .todo .cont{
+        display: block;
+        min-height: calc(100vh - 4rem);
+        top: 0;
+        text-align: center;
+        position: relative;
+    }
+    .control{
+        display: inline-block;
+        position: relative;
+    }
+
+    .form__div{
+        display: inline-block;
+    }
+    .form__input{
+    }
+    #seccion{
+        line-height: 1rem;
+    }
+    .form__label{
+        position: absolute; 
+        left: .25rem;
+        top: .75rem;
+        padding: 0 .25rem;
+        background: var(--bg-body-color);
+        color: var(--gray-color);
+        font-size: var(--normal-font-size);
+        transition: .2s;
+    }
+
+    .form__label{
+        color: var(--gray-color);   
+    }
+    .div__nombre{
+        min-width: 50%;
+    }
+    #nombre{
+        padding: 0.5rem 0.5rem 0.3rem 0.5rem;
+    }
+    .label__nombre{
+        top: .4rem;
+    }
+    /* BOTON FILTRO! */
+    .form__button{
+        padding: .7rem 1rem;
+        display: inline-block;
+        transform: translateY(-.2rem);
+
+    }
+    .form__button i{
+        margin-right: 0;
+    }
+
+    /*input number sin indicadores*/
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    input[type=number] {
+      -moz-appearance: textfield;
+    }
+    /******************************/
+
+    /** TABLA!! **/
+    .table__div{
+        overflow: scroll;
+        overflow-y: hidden;
+    }
+    .table{
+        border-collapse: collapse;
+        table-layout: fixed;
+        border-bottom: 2px solid var(--first-color);
+        border-radius: .5rem;
+    }
+    /*.table__head*/thead{   
+        background-color:  var(--first-color);
+        line-height: 1.5rem;
+        color: #fff;
+        display:tabl;
+    }
+    .table__head tr{
+
+    }
+    .table__head tr th{
+        padding: .5rem;
+        border-left: 2px solid var(--bg-body-color);
+    }
+    .table .row__person:nth-child(even) {
+        background: #eaeaea;
+    }
+    .table .row__person:nth-child(even) td{
+        border-left: 2px solid var(--bg-body-color);
+    }
+    .table .row__person:nth-child(odd) td{
+        border-left: 2px solid #eaeaea;
+    }
+    .table .row__person:nth-child(odd) .t_contador{
+        border-left: none;
+    }
+    .table .row__person:nth-child(odd):hover td, .table .row__person:nth-child(even):hover td{
+        border-left: 2px solid var(--yellow-color);
+    }
+    .table .row__person:hover{
+        background: var(--yellow-color);
+        cursor: pointer;
+    }
+    .table .row__person td{
+        padding: .7rem .5rem;   
+    }
+    .row__person a, .info_persona a{
+        text-decoration: none;
+        color: var(--first-color);
+        font-weight: 600;
+    }
+    .row__person a:hover, .info_persona a:hover{
+        color: #dc2c18;
+    }
+
+    .t_nombre, .t_apellidos, .t_calle, .t_colonia{
+        text-align: left
+    }
+    .t_contador{
+        font-weight: 600;
+        color: var(--first-color)
+    }
+    .t_capi{
+        text-transform: capitalize;
+    }
+    .t_celular, .t_telefono, .t_calle{
+        font-weight: 600;
+    }
+
+    /***** ERROR EN BUSQUEDA *****/
+    .filter__error{
+        color: var(--gray-color);
+        text-align: center;
+        font-weight: 300;
+    }
+    .filter__error i{
+        font-size: 7rem;
+        color: var(--input-color)
+    }
+    .filter__error p{
+        font-size: 2rem;
+        margin-bottom: .5rem;
+    }
+
+    /***** INFO POPUP PERSONAS ****/
+    .info_persona{
+        position: fixed;
+        display: flex;
+        background: rgba( 0, 0, 0, 0.514 );
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+    }
+    .info_persona .cont_info{
+        background: var(--bg-body-color);
+        display: inline-block;
+        padding: 1.5rem;
+        position: relative;
+        border-radius: .4rem;
+        box-shadow: 0 0 .5rem rgba(0,0,0,0.7);
+        width: 60%
+    }
+    .info_persona #close_info{
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 1.5rem;
+        transform: translate(50%, -50%);
+        cursor: pointer;
+        border-radius: 2rem;
+        border: .3rem solid #fff;
+        background-color: #fff;
+    }
+    .info_persona #close_info:hover{
+        color: var(--error-color)
+    }
+
+    .datos_persona{
+        position: relative;
+        margin-bottom: 1rem;
+        padding-right: .7rem;
+        margin-right: .4rem;
+        display: inline-block;
+        text-align: left;
+    }
+    #datos_persona h2{
+        margin-bottom: 1rem;
+        color: var(--first-color);
+    }
+
+    .datos_persona label{
+        left: 0rem;
+        top: 0rem;
+        padding: .1rem .5rem;
+        background: var(--first-color);
+        color: #fff;
+        font-size: var(--small-font-size);
+        font-weight: 600;
+        font-style: normal;
+    }
+    .datos_persona p{
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        font-size: var(--normal-font-size);
+        border-radius: .3rem;
+        outline: none;
+        padding: .4rem .5rem 0rem 0rem;
+        background: none;
+        z-index: 1;
+    }
+
+    #info_cve, #info_curp, #info_rfc{
+        text-transform: uppercase
+    }
+
+    #info_nombre_persona, #info_promotor{
+        text-transform: capitalize;
+    }
+
+    /* BOTONES EDICION REGISTROS */
+    .btns_persona{
+        display: flex;
+        justify-content: center;
+        margin-top: .5rem;
+    }
+    #editar_persona, #delete_persona{
+        display: flex;     
+        margin: 0 1rem;
+        align-content: center;
+        justify-content: center;
+    }
+    .fa-save{
+        font-size: 
+    }
+    #editar_persona:hover{
+        background: #a34600;
+    }
+    #delete_persona:hover{
+        background: #a20000;
+    }
+    #delete_default, #delete_confirmar{
+        display: flex;
+
+    }
+    #delete_persona i, #editar_persona i{
+        margin-right: .3rem
+    }
+    #editar_persona{
+        background: var(--orange-color)
+    }
+    #delete_persona{
+        background: var(--error-color)
+    }
+    .fa-square-xmark, .fa-square-check{
+        font-size: 1.5rem;
+        margin-left: .5rem;
+    }
+    .fa-square-xmark:hover{
+        color: var(--border-color);
+        box-shadow: 0 0 5px rgba( 0, 0, 0, 0.573 )
+    }
+    .fa-square-check:hover{
+        color: var(--yellow-color);
+        box-shadow: 0 0 5px rgba( 0, 0, 0, 0.573 )
+    }
+
+    /* NOTIFIACION BORRADO */
+    .notificacion_borrado{
+        display: flex;
+        justify-content: center;
+    }
+    .notificacion_borrado .borrado_success, .notificacion_borrado .borrado_error{
+        background: var(--error-color);
+        color: #fff;
+        display: flex;
+        padding: .5rem 1.5rem;
+        border-radius: .4rem;
+        margin-bottom: 1rem;
+    }
+    .notificacion_borrado .borrado_error{
+        background: var(--gray-color);
+    }
+    .notificacion_borrado .borrado_success p, .notificacion_borrado .borrado_error p{
+        margin-left: .5rem;
+        font-weight: 600;
+    }
+
+    /* BOTONES PAGINADO */
+    .pagination{
+        display: inline-block;
+        padding-left: 0;
+        margin: 20px 0;
+        border-radius: 4px;
+        text-align: center;
+        list-style-type: none;
+
+    }    
+    .pagina{
+        float: left;    
+        padding: .5rem .7rem;
+        background: #d3d3d3;
+        margin-left: .3rem;
+        color: var(--first-color);
+        border-radius: .3rem
+    }
+    .active{
+        font-weight: 600;
+        color: #fff;
+        background: var(--first-color);
+    }
+    .pagina:hover{
+        background: var(--orange-color);
+        cursor: pointer;
+        color: #fff;
+        font-weight: 600;
+    }
+    
+    .table .table__head tr th:nth-child(4), .table .table__head tr th:nth-child(5), .table .table__head tr th:nth-child(7), .table .table__head tr th:nth-child(8),.table .table__head tr th:nth-child(11),.table .table__head tr th:nth-child(13){
+        display: none;
+    }
+    
+    .t_conador, .t_edad, .t_sexo, .t_telefono, .t_sin_telefono, .t_afiliacion, .t_seccion, .t_estado {
+	    display: none;
+    }
+    
+    .div__seccion #seccion{
+        width: 5rem;
+    }
+    
+    #tabla_personas {
+        transform: rotateX(180deg);
+        overflow-x: auto;
+    } 
+    .table {
+        transform: rotateX(180deg);
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+}

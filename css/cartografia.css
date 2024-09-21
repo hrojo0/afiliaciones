@@ -1,0 +1,226 @@
+.todo .cont{
+    padding: 0;
+}
+.heatmap_preview, .markermap_preview{
+    width: calc(50% - 2px);
+    height: calc(100vh - 4rem);
+    overflow: hidden;
+    position: relative;
+}
+.heatmap_preview{
+    border-right: 2px solid var(--bg-body-color)
+}
+.markermap_preview{
+    border-left: 2px solid var(--bg-body-color)
+}
+.heatmap_preview .heatmap_img, .markermap_preview .markermap_img{
+    position: relative;
+    top: 0;
+}
+.shadow{
+    width: 100%;
+    height: calc(100vh - 4rem);
+    z-index: 99;
+    position: absolute;
+    transition: .3s;
+}
+.heatmap_img img, .markermap_img img{
+    display: block;
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    top: 0;
+    
+    transition: .3s;
+}
+.heatmap_preview:hover .shadow, .markermap_preview:hover .shadow{
+    background: rgba( 131, 1, 1, 0.448 );
+    animation: 4s ease background;
+}
+.heatmap_preview:hover img, .markermap_preview:hover img{
+    transform: scale(1.05);
+    animation: 4s ease background;
+    -webkit-filter: blur(4px);
+    filter: blur(4px);
+}
+
+.form__button{
+    z-index: 9929;
+    width: 40%;
+    min-width: 15rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    font-weight: 700;
+    flex-direction: column;
+    align-items: center;
+}
+.form__button i{
+    font-size: 2rem;
+    margin-bottom: .5rem
+}
+iframe{
+    width: 100%;
+    height: calc(100vh - 4rem)
+}
+.back{
+    top: .5rem;
+    left: .5rem;
+    flex-direction: row;
+    transform: translate(0,0);
+    min-width: 8rem;
+    width: 5rem;
+    font-weight: 300;
+    height: auto;
+}
+.back i{
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    padding: auto;
+}
+
+.btns_persona_mod #delete_persona_mod{
+    z-index: 9929;
+    display: inline-block;
+    width: auto;
+    min-width: 1rem;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(0%, 0%);
+    text-transform: capitalize;
+    font-weight: 500;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btns_persona_mod #delete_persona_mod #cancel_mod i{
+    font-size: 1rem;
+}
+
+/****************************************************************************************/
+/***************                        RESPONSIVE                        ***************/
+/****************************************************************************************/
+@media only screen and (max-width: 900px){
+    .todo .cont{
+        padding: 0;
+    }
+    #cont_menu{
+        display: flex;
+        flex-direction: column;
+    }
+    .heatmap_preview{
+        margin-bottom: .2rem;
+    }
+    .heatmap_preview, .markermap_preview{
+        width: 100%;
+        height: calc(50vh - 2.1rem);
+        overflow: hidden;
+        position: relative;
+        
+    }
+    .heatmap_preview{
+        border-right: 2px solid var(--bg-body-color)
+    }
+    .markermap_preview{
+        border-left: 2px solid var(--bg-body-color)
+    }
+    .heatmap_preview .heatmap_img, .markermap_preview .markermap_img{
+        position: relative;
+        top: 0;
+    }
+    .shadow{
+        width: 100%;
+        height: calc(100vh - 4rem);
+        z-index: 99;
+        position: absolute;
+        transition: .3s;
+    }
+    .heatmap_img img, .markermap_img img{
+        display: block;
+        position: absolute;
+        min-height: 100%;
+        min-width: 100%;
+        top: 0;
+
+        transition: .3s;
+    }
+    .heatmap_preview:hover .shadow, .markermap_preview:hover .shadow{
+        background: rgba( 131, 1, 1, 0.448 );
+        animation: 4s ease background;
+    }
+    .heatmap_preview:hover img, .markermap_preview:hover img{
+        transform: scale(1.05);
+        animation: 4s ease background;
+        -webkit-filter: blur(4px);
+        filter: blur(4px);
+    }
+
+    .form__button{
+        z-index: 9929;
+        width: 40%;
+        min-width: 15rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-transform: uppercase;
+        font-weight: 700;
+        flex-direction: column;
+        align-items: center;
+    }
+    .form__button i{
+        font-size: 2rem;
+        margin-bottom: .5rem
+    }
+    iframe{
+        width: 100%;
+        height: calc(100vh - 4rem)
+    }
+    .back{
+        top: .5rem;
+        left: .5rem;
+        flex-direction: row;
+        transform: translate(0,0);
+        min-width: 8rem;
+        width: 5rem;
+        font-weight: 300;
+        height: auto;
+    }
+    .back i{
+        font-size: 1.5rem;
+        margin-bottom: 0;
+        padding: auto;
+    }
+    
+    .btns_persona_mod {
+	    display: block;
+        
+        
+    }
+    
+    .btns_persona_mod{
+        display: flex;
+    }
+    
+    .btns_persona_mod #delete_persona_mod{
+        z-index: 9929;
+        display: inline-block;
+        width: auto;
+        min-width: 1rem;
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: translate(0%, 0%);
+        text-transform: capitalize;
+        font-weight: 500;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btns_persona_mod #delete_persona_mod #cancel_mod i{
+        font-size: 1rem;
+    }
+}

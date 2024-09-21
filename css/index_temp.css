@@ -1,0 +1,400 @@
+.cont{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.titulo{
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: .5rem;
+}
+.titulo p{
+    font-weight: 600;
+    color: var(--first-color);
+    font-size: 2rem;
+}
+.titulo span{
+    font-weight: 300;
+    color: var(--border-color);
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+.fecha{
+    display: flex;
+    color: var(--gray-color);
+    margin-bottom: 1.5rem;
+}
+.fecha p{
+    margin-left: .3rem;
+}
+.inner{
+    text-align: center
+}
+.graficas{
+    margin-top: -1rem;
+    padding-top: 1rem
+}
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-auto-columns: minmax(100px, auto);
+    grid-gap: 1rem;
+    grid-template-rows: auto 1fr; /* changed */
+}
+.wrapper > div{
+    background: #ededed;
+    border-radius: .5rem;
+}
+#filter__reload{
+    display: inline-block;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    max-width: 3rem;
+    
+}
+#filter__reload i{
+    text-align: center; 
+    margin: 0
+}
+.personas__registradas{
+    grid-column: 1 / 3;
+} 
+.wrapper__box{
+    display: flex;
+    padding: .5rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.box__title{
+    color: var(--gray-color);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: .4rem
+}
+.wrapper__box__content{
+    display: flex;
+    flex-direction: row;    
+}
+.wrapper__box__content .icono{ 
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color: var(--button-color);
+    margin-right: .5rem;
+} 
+.inside__info{
+    display: flex;
+    align-items: center;
+}
+.inside__first{
+    margin-right: .5rem;
+}
+.dato__small, .dato__numero{
+    font-weight: 700;
+    color: var(--gray-color);
+}
+.dato__relevante{
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--first-color);
+}
+.dato__numero{
+    font-size: 1.1rem;
+    color: var(--button-color);
+}
+.graph__ {
+    padding: 1rem
+}
+.chart__{
+    width: calc(100% - 1rem)
+}    
+canvas{
+    height: 100%;
+    width: 100%;
+}
+
+/* CONTROL DE FILTROS */
+.info_combos{
+    text-align: center;
+}
+.control{
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    
+}
+.form__div {
+    display: inline-block;
+}
+.label__seccion{
+    background-color: var(--bg-body-color)
+}
+
+.contenedor_buscador{
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background: #ededed;
+    margin-top: 1rem;
+    border-radius: .5rem;
+}
+.buscador_seccion{
+    font-size: 1rem;
+    position: relative;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+    border: 2px solid var(--border-color);
+    border-top: 0;
+    vertical-align: top;
+    padding-top: 0;
+    width: 60%;
+    min-width: 25rem;
+}
+.colonias_seccion{
+    margin-left: .5rem;
+    margin-top: .5rem;
+}
+#colonias{
+    text-align: justify;
+}
+#colonias .colonia{
+    display: inline-block;
+    font-weight: 700;
+    color: var(--first-color);
+    margin-right: .5rem;    
+    margin-bottom: .3rem;    
+}
+#colonias .colonia .ciudad{
+    font-weight: 400;
+    color: var(--gray-color);
+}
+#colonia_title{
+    font-size: var(--small-font-size);
+    font-weight: 700;
+    color: var(--gray-color)
+}
+#colonias .fa-solid, #colonias .error_seccion, .filter__error{
+    color: var(--gray-color);
+    display: inline-block;
+    font-weight: 600
+}
+#colonias .error_seccion{
+    margin-left: .3rem
+}
+.label__seccions{
+    background: #ededed;
+}
+/****************************************************************************************/
+/***************                        RESPONSIVE                        ***************/
+/****************************************************************************************/
+@media only screen and (max-width: 900px){
+    .cont{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+    .titulo p{
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: .5rem;
+    }
+    
+    .inner{
+        text-align: center;
+        position: relative;
+    }
+    .graficas{
+        margin-top: 0rem;
+        padding-top: 0rem;
+        width: 100%;
+    }
+    
+    .titulo p{
+        font-weight: 600;
+        color: var(--first-color);
+        font-size: 2rem;
+    }
+    .titulo span{
+        font-weight: 300;
+        color: var(--border-color);
+        font-size: 2rem;
+        margin-left: 1rem;
+    }
+    .fecha{
+        display: flex;
+        color: var(--gray-color);
+        margin-bottom: 1.5rem;
+    }
+    .fecha p{
+        margin-left: .3rem;
+    }
+    .wrapper{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: minmax(100px, auto);
+        grid-auto-columns: minmax(100px, auto);
+        grid-gap: 1rem;
+        grid-template-rows: auto 1fr; /* changed */
+    }
+    .wrapper > div{
+        background: #ededed;
+        border-radius: .5rem;
+    }
+    #filter__reload{
+        display: inline-block;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        max-width: 3rem;
+
+    }
+    #filter__reload i{
+        text-align: center; 
+        margin: 0
+    }
+    .personas__registradas, .graph__rango__edad{
+        grid-column: 1 / 5;
+    }
+    .wrapper__box{
+        display: flex;
+        padding: .5rem;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .afiliados__sexo, .afiliados__edad__rango__sexo, .graph__colonias__mas__afiliacion, .graph__secciones__mas__afiliacion{
+        grid-column: 1 / 3;
+    }
+    .afiliados__edad, .afiliados__seccion__sexo, .graph__colonias__menor__afiliacion, .graph__secciones__menor__afiliacion{
+        grid-column: 3 / 5;
+    }
+    .box__title{
+        color: var(--gray-color);
+        font-weight: 600;
+        font-size: 1.1rem;
+        margin-bottom: .4rem
+    }
+    .wrapper__box__content{
+        display: flex;
+        flex-direction: row;    
+    }
+    .wrapper__box__content .icono{ 
+        display: flex;
+        align-items: center;
+        font-size: 2rem;
+        color: var(--button-color);
+        margin-right: .5rem;
+    } 
+    .inside__info{
+        display: flex;
+        align-items: center;
+    }
+    .inside__first{
+        margin-right: .5rem;
+    }
+    .dato__small, .dato__numero{
+        font-weight: 700;
+        color: var(--gray-color);
+    }
+    .dato__relevante{
+        font-weight: 800;
+        font-size: 1.5rem;
+        color: var(--first-color);
+    }
+    .dato__numero{
+        font-size: 1.1rem;
+        color: var(--button-color);
+    }
+    .graph__ {
+        padding: 1rem
+    }
+    .chart__{
+        width: calc(100% - 1rem)
+    }    
+    canvas{
+        height: 100%;
+        width: 100%;
+    }
+
+    /* CONTROL DE FILTROS */
+    .info_combos{
+        text-align: center;
+    }
+    .control{
+        display: inline-block;
+        position: relative;
+        text-align: center;
+
+    }
+    .form__div {
+        display: inline-block;
+    }
+    .label__seccion{
+        background-color: var(--bg-body-color)
+    }
+
+    .contenedor_buscador{
+        position: relative;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        background: #ededed;
+        margin-top: 1rem;
+        border-radius: .5rem;
+    }
+    .buscador_seccion{
+        font-size: 1rem;
+        position: relative;
+        margin: 1rem;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+        border: 2px solid var(--border-color);
+        border-top: 0;
+        vertical-align: top;
+        padding-top: 0;
+        width: 100%;
+        min-width: 25rem;
+    }
+    .colonias_seccion{
+        margin-left: .5rem;
+        margin-top: .5rem;
+    }
+    #colonias{
+        text-align: justify;
+    }
+    #colonias .colonia{
+        display: inline-block;
+        font-weight: 700;
+        color: var(--first-color);
+        margin-right: .5rem;    
+    }
+    #colonias .colonia .ciudad{
+        font-weight: 400;
+        color: var(--gray-color);
+    }
+    #colonia_title{
+        font-size: var(--small-font-size);
+        font-weight: 700;
+        color: var(--gray-color)
+    }
+    #colonias .fa-solid, #colonias .error_seccion, .filter__error{
+        color: var(--gray-color);
+        display: inline-block;
+        font-weight: 600
+    }
+    #colonias .error_seccion{
+        margin-left: .3rem
+    }
+    .label__seccions{
+        background: #ededed;
+    }
+}

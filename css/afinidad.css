@@ -1,0 +1,318 @@
+.form-register-cont{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+h2{
+    text-align: center
+}
+.form__div{
+    display: inline-block;
+    margin-bottom: 1.5rem;   
+}
+.form__div__searchMap{
+    margin-top: .5rem;
+}
+.form__input{
+    width: auto;
+    padding-top: .5rem;
+} 
+.form__label{
+    background: var(--bg-body-color);
+    top: .5rem;
+    color: var(--gray-color);   
+}
+.form__input:focus{
+    border-color: var(--first-color);
+    background: var(--bg-body-color);
+}
+.form__input:focus + .form__label{
+    color: var(--first-color);
+    background: var(--bg-body-color);
+}
+.afiliacion{
+    min-width: 5rem;
+}
+.municipio{
+    min-width: 5rem; 
+}
+#rfc, #curp, #cve_elec{
+    text-transform: uppercase;
+}
+#nombre, #ap_pat, #ap_mat, #calle{
+    text-transform: capitalize;
+}
+#domicilio{
+    min-width: 20rem;
+}
+#cve_elec, #curp{
+    min-width: 12rem
+}
+#cp{
+    max-width: 7rem;
+}
+#celular, #telefono{
+    max-width: 8rem; 
+}
+#num_int, #pais, #seccion{
+    max-width: 8rem;
+}
+#map{
+    width: 100%;
+    height: 300px;
+}
+.title {
+  font-weight: bold;
+}
+.read:read-only{
+    background-color: var(--readonly-color);
+}
+.form__button{
+    width: 17rem;
+}
+.form__error{
+    position: absolute;
+    justify-content: left;
+    margin-bottom: 0rem;
+}
+.campos{
+    font-weight: 600;
+    margin-bottom: .5rem;
+    font-style: italic;
+    font-size: .9rem;
+    color: var(--gray-color);
+}
+
+/*input number sin indicadores*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+/******************************/
+.gm-fullscreen-control, .gmnoprint, .gm-style-cc{
+    display: none;
+}
+
+#form__div__nombre_mod, #form__div__aps_mod, #form__div__oldpass_mod, #form__div__newpass_mod, #form__div__newpasscheck_mod{
+    display: block;
+}
+#form__div__nombre_mod .form__input, #form__div__aps_mod .form__input, #form__div__oldpass_mod .form__input, #form__div__newpass_mod .form__input, #form__div__newpasscheck_mod .form__input{
+    width: 100%;
+}
+
+/************************************/
+/* BOTONES PARA CAMBIAR TIPO DE FORM*/
+.opciones_registro{
+    margin-bottom: 2rem;
+}
+.opciones_registro .btns_opt_reg{
+    display: flex;
+    justify-content: center;
+}
+.opciones_registro .opt_reg{
+    margin: 1rem;
+    margin-top: 0;
+    padding: 5rem 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.opciones_registro .form__error{
+	position: relative;
+    justify-content: center;
+    margin: .5rem;
+    font-size: 1rem
+}
+.form__title{
+    margin-bottom: 0;
+}
+.form_id__{
+    margin-bottom: 0;
+}
+.title_editar{
+    margin-bottom: 1rem;
+}
+
+.title_type_form{
+    margin-bottom: .5rem;
+}
+
+tbody tr:hover{
+    transition: 0.2s;
+}
+
+tbody tr:hover{
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #2d2d2d
+}
+.fa-whatsapp{
+    background: var(--first-color);
+    color: #fff;
+    padding: .5rem 1rem;
+    border-radius: .4rem;
+    transition: 0.2s;
+}
+.fa-whatsapp:hover{
+    background: var(--first-color-hover);
+    color: #e8e7e7
+}
+#cont_register_success{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+#register_success{
+    background:#07b007;
+    color:#fff;
+    display:inline-block;
+    text-align:center;
+    padding:.5rem;
+    border-radius: .3rem;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+#register_success i{
+    margin-right: .5rem; 
+    color:#07b007;
+    background: white;
+    padding: .3rem;
+    border-radius: .2rem;
+}
+#register_success p{
+    font-size: 1.3rem;
+}
+
+#help_domicilio{
+    margin-left: .5rem;
+    cursor: pointer
+}
+
+/*********************************************************************************/
+/*CHECKBOX!!*/
+/* The container */
+.container {
+    display: inline-block;
+    position: relative;
+    /*padding-left: 1.5rem;*/
+    cursor: pointer;
+    font-size: 1rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-right: 1rem;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 1.3rem;
+    width: 1.3rem;
+    background-color: #afafaf;
+    transform: translate(110%, -10%);
+    
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a red background */
+.container input:checked ~ .checkmark {
+    background-color: var(--first-color);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+    left: 8px;
+    top: 4px;
+    width: .2rem;
+    height: .5rem;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+#chk_rural_lbl:hover{
+    color: var(--first-color);
+    font-weight: 600
+}
+
+
+
+
+/**************************************************************************************/
+/*********************************     RESPONSIVE   ***********************************/
+/**************************************************************************************/
+
+
+@media only screen and (max-width: 900px){
+   /************************************/
+    /* BOTONES PARA CAMBIAR TIPO DE FORM*/
+    .opciones_registro{
+        margin-bottom: 2rem;
+        
+    }
+    .opciones_registro .btns_opt_reg{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .opciones_registro .opt_reg{
+        margin: 1rem;
+        margin-top: 0;
+        padding: .75rem 1rem;
+        font-size: 1.3rem;
+        text-align: center;
+        width: calc(100%)
+    }
+    .opciones_registro .form__error{
+        position: relative;
+        justify-content: center;
+        margin: .5rem;
+        font-size: 1rem
+    }
+    .form__div, .form__input, .combo-sexo .sexo, .promotor__, .combo-promotor{
+        width: 100%;
+    }
+    .f_nac, .sexo{
+        width: 49%;
+    }
+    
+    #contenido_domicilio .form__div{
+        width: auto
+    }
+ 
+    
+}

@@ -1,0 +1,115 @@
+.ajuste-fixed{
+    position: fixed;
+    width: 12rem;
+    height: 100vh;
+    background-color: var(--bg-menu-color);
+    z-index: 999;
+}
+.side-menu{
+    position: relative;
+    
+    height: calc(100vh - 3rem);
+    width: 12rem;
+    height: auto
+}
+.nav a{
+    text-decoration: none;
+    color: #fff;
+}
+.nav a:hover{
+    color: 
+}
+.nav a i{
+    padding: 20px;
+}
+.nav a li{
+    padding-right: 20px;
+}
+.nav a li:hover:before{
+    content: '';
+	border-style: solid;
+	border-width: 0px 0px 56px 5px;
+	position: absolute;
+    color: var(--orange-color);
+}
+.nav a li:hover{
+    background: var(--first-color);
+    
+}
+.menu_seleccion:before{
+    content: '';
+	border-style: solid;
+	border-width: 0px 0px 56px 5px;
+	position: absolute;
+    color: var(--orange-color);
+}
+.nav a{
+    position: relative;
+}
+.menu_seleccion{
+    background: var(--first-color);
+}
+.menu_seleccion:after{
+    content: '';
+    border-style: solid;
+	border-width: .8rem .8rem .8rem 0px;
+	border-color: transparent var(--bg-body-color) transparent transparent;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translate(2%, -50%)
+    
+}
+
+
+/****************************************************************************************/
+/***************                        RESPONSIVE                        ***************/
+/****************************************************************************************/
+@media only screen and (max-width: 900px){
+    .ajuste-fixed{
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        z-index: 99990;
+        display: none;
+    }
+    .side-menu{
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .menu-items{
+        width: 100%;
+    }
+    .nav {
+        list-style: none;
+    }
+    .nav a{
+        text-align: center;
+        font-size: 2rem;
+    }
+    .nav a:hover{
+        color: #fcb32a;
+    }
+    .nav a i{
+        margin: 1rem 0;
+    }
+    .nav a li{
+        padding-right: 0px;
+    }
+    .nav a li:hover:before{
+        border-width: 0px 0px 0px 0px;
+    }
+    .menu_seleccion:before{
+        border-width: 0px 0px 0px 0px;
+    }
+    .menu_seleccion{
+        background: none;
+        color: #fcb32a;
+    }
+    .menu_seleccion:after{
+        border-color: transparent transparent transparent transparent;
+    }
+}

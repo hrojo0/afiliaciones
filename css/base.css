@@ -1,0 +1,665 @@
+
+/*===== VARIABLES CSS =====*/
+:root{
+    /*===== Colores =====*/
+    --first-color: #8B1232;
+    --first-color-hover: #63071f;
+    --input-color: #80868B;
+    --border-color: #bababa;
+    --bg-color: #0f0404;
+    --button-color: #C47335;
+    --popup-bg-color: #FCFCFC;
+    --error-color: #be1111;
+    --bg-menu-color: #591111;
+    --bg-body-color: #f7f7f7;
+    
+    --orange-color: #C47335;
+    --gray-color: #4C5B5C;
+    --green-color: #0ea706;
+    --white-color: #000;
+    --yellow-color: #FDE74C;
+    --green-especial-color: #adf55b;
+    --blue-color: #3891A6;
+    --brown-sugar-color: #BB7E5D;
+    
+    --readonly-color: rgba( 163, 163, 163, 0.165 );
+
+    /*===== Fuente y tipografia =====*/
+    --body-font: 'Titillium Web', sans-serif;
+    --normal-font-size: 1rem;
+    --small-font-size: .75rem;
+    
+    /*===== Fuente y tipografia =====*/
+    --padding-box: 1.5rem;
+    --margin-box: 1rem;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Titillium Web', sans-serif;
+	position: relative;
+    background-color: var(--bg-body-color);
+}
+header{
+    width: 100%;
+    background-color: var(--first-color);
+    position: fixed;
+    display: flex;
+    height: 4rem;
+    z-index: 9999;
+    box-shadow: 0 0 .8rem rgba( 0, 0, 0, 0.494 );
+    display: flex;
+    justify-content: flex-end;
+}
+.header_user{
+    text-align: end;
+}
+.header_user .flex_header_user{
+    display: flex;
+    height: 4rem;
+}
+.header_user .header_user_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+}
+.header_user .header_user_info .header_datos_persona{
+    margin-bottom: .3rem;
+    display: flex;
+    justify-content: flex-end
+}
+.header_user .header_user_info #header_nombre{
+    font-weight: 700;
+}
+.logout_{
+    margin-right: 0.5rem;
+}
+.header_user .header_user_info #logout{
+    text-decoration: none;
+    border: 1px solid var(--yellow-color);
+    color: var(--yellow-color);
+    transition: .2s;
+    padding: 0 .4rem;
+    border-radius: .5rem;
+    margin-left: .5rem;
+    font-weight: 400;
+    cursor: pointer;
+}
+.header_user .header_user_info #logout:hover{
+    color: var(--first-color);
+    background: var(--yellow-color);
+}
+.header_user .header_user_info #header_nivel{
+    font-size: .8rem
+}
+#header_info_nivel{
+    display: flex;
+}
+.header_user .header_foto{
+    height: 4rem;
+}
+.header_user .header_foto img{
+    height: 3rem;
+    margin: .5rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.todo{
+    position: relative;
+    display: flex;
+    width: 100%;
+    top: 4rem;
+}
+.todo .cont{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: calc(100% - 12rem);
+    padding: var(--padding-box);
+    left: 12rem;
+}
+
+
+
+
+
+
+
+
+
+
+/* POSICIONAR POPUP USUARIO*/
+.modificar_usuario{
+    position: fixed;
+    display: flex;
+    background: rgba( 0, 0, 0, 0.514 );
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    height: 100vh;
+}
+.modificar_usuario .cont_modificar{
+    background: var(--bg-body-color);
+    display: inline-block;
+    padding: 1.5rem;
+    position: relative;
+    border-radius: .4rem; 
+    box-shadow: 0 0 .5rem rgba(0,0,0,0.7);
+    width: 60%;
+    max-width: 40rem;
+}
+
+.modificar_usuario #close_info_mod{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.5rem;
+    transform: translate(50%, -50%);
+    cursor: pointer;
+    border-radius: 2rem;
+    border: .3rem solid #fff;
+    background-color: #fff;
+    z-index: 99999;
+}
+.modificar_usuario #close_info_mod:hover{
+    color: var(--error-color);
+}
+
+/*BOTONES POPUP USUARIO*/
+.btns_persona_mod{
+    display: flex;
+    justify-content: center;
+    margin-top: .5rem;
+}
+/* SUBMIT BUTTON */
+#submit_mod{
+    display: flex;
+    padding: .75rem 1rem;
+    outline: none;
+    border: none;
+    background: #039a14;
+    color: #fff;
+    font-size: var(--normal-font-size);
+    border-radius: .3rem;
+    cursor: pointer;
+    transition: .2s;
+    justify-content: center;
+    margin: 0 1rem;
+    align-content: center;
+    justify-content: center;
+}
+#submit_mod i{
+    margin-right: .5rem
+}
+#submit_mod:hover{
+    background: #09710e;
+}
+/* CANCEL BUTTON */
+#cancel_mod{
+    display: flex;
+}
+#delete_persona_mod{
+    background: var(--error-color)
+}
+#delete_persona_mod:hover{
+    background: #a20000;
+}
+
+#delete_persona_mod i, #submit_mod i{
+    margin-right: .3rem
+}
+#register-form #id{
+    display: none;
+}
+
+/*ajustes extra popup add user */
+.modificar_usuario .ajuste_adduser{
+    display: flex;
+}
+
+/* thumbnail */
+.row_mod {
+    position: relative;
+    overflow:hidden;
+    border-radius:5rem;
+    -moz-border-radius:0.5em;
+    -webkit-border-radius:0.5em;
+    background: #c9c9c9;
+    width: 50%;
+    margin-right: 2rem;
+    border-radius: 50%;
+    overflow: hidden;
+    max-height: 18rem;
+    box-shadow: .4rem .4rem 0 #c1c1c1;
+    border: .4rem solid white;
+    width: 14rem;
+    height: 14rem;
+}
+#datos_usuario_mod{
+    width: calc(50% - 2rem);
+}
+.file-preview_mod {
+    position: relative;
+    height: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.file-preview_mod img{
+    position: relative;
+    height: 100%;
+}
+.row_mod label {
+    position: absolute;
+    font-weight:bold;
+    z-index: 9999;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--gray-color);
+    cursor: pointer;
+    transition: .3s
+}
+.row_mod label:hover{
+    background: rgba( 0, 0, 0, 0.362 )
+}
+.over_label_mod{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.over_label_mod i{
+    font-size: 4rem;
+}
+.over_label_mod p{
+    font-size: 1.5rem
+}
+
+
+/*BOTON CMABIAR CONTRASEÑA*/
+#change_pass_mod{
+    display: flex;
+    padding: .75rem 1rem;
+    outline: none;
+    border: none;
+    background-color: var(--first-color);
+    color: #fff;
+    font-size: var(--normal-font-size);
+    border-radius: .3rem;
+    cursor: pointer;
+    transition: .2s;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+#change_pass_mod:hover{
+    background-color: var(--first-color-hover)
+}
+#pass_flag{
+    display: none;
+}
+
+.hamb{
+    display: none;
+}
+.close_hamb{
+    display: none;
+}
+
+
+
+/*Respuesta pop up*/
+.respuesta_popup{
+    background: var(--bg-body-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--green-color);
+    font-weight: 600;
+    font-size: 10rem;
+    border-radius: .4rem; 
+}
+.respuesta_popup p{
+    font-size: 3rem
+}
+#success_delete{
+    color: var(--error-color);
+}
+
+/****************************************************************************************/
+/***************                        RESPONSIVE                        ***************/
+/****************************************************************************************/
+@media only screen and (max-width: 900px){
+    header{
+        width: 100%;
+        background-color: var(--first-color);
+        position: fixed;
+        display: flex;
+        height: 4rem;
+        z-index: 9999;
+        box-shadow: 0 0 .8rem rgba( 0, 0, 0, 0.494 );
+        display: flex;
+        justify-content: flex-end;
+    }
+    .header_user{
+        text-align: end;
+    }
+    .header_user .flex_header_user{
+        display: flex;
+        height: 4rem;
+    }
+    .header_user .header_user_info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: #fff;
+    }
+    .header_user .header_user_info .header_datos_persona{
+        margin-bottom: .3rem
+    }
+    .header_user .header_user_info #header_nombre{
+        font-weight: 700;
+    }
+    .header_user .header_user_info #header_nombre #logout{
+        text-decoration: none;
+        border: 1px solid var(--yellow-color);
+        color: var(--yellow-color);
+        transition: .2s;
+        padding: 0 .4rem;
+        border-radius: .5rem;
+        margin-left: .5rem;
+        font-weight: 400;
+        cursor: pointer;
+    }
+    .header_user .header_user_info #header_nombre #logout:hover{
+        color: var(--first-color);
+        background: var(--yellow-color);
+    }
+    .header_user .header_user_info #header_nivel{
+        font-size: .8rem
+    }
+    .header_user .header_foto{
+        height: 4rem;
+    }
+    .header_user .header_foto img{
+        height: 3rem;
+        margin: .5rem;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    
+    
+    .todo{
+        position: relative;
+        display: flex;
+        width: 100%;
+        top: 4rem;
+    }
+    .todo .cont{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: var(--padding-box);
+        left: 0rem;
+        
+    }
+
+
+    /* POSICIONAR POPUP USUARIO*/
+    .modificar_usuario{
+        position: fixed;
+        display: flex;
+        background: rgba( 0, 0, 0, 0.514 );
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        height: 100vh;
+    }
+    .modificar_usuario .cont_modificar{
+        background: var(--bg-body-color);
+        display: inline-block;
+        padding: 1.5rem;
+        position: relative;
+        border-radius: .4rem; 
+        box-shadow: 0 0 .5rem rgba(0,0,0,0.7);
+        width: 80%;
+        max-width: 40rem;
+    }
+
+    .modificar_usuario #close_info_mod{
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 1.5rem;
+        transform: translate(50%, -50%);
+        cursor: pointer;
+        border-radius: 2rem;
+        border: .3rem solid #fff;
+        background-color: #fff;
+        z-index: 99999;
+    }
+    .modificar_usuario #close_info_mod:hover{
+        color: var(--error-color);
+    }
+
+    /*BOTONES POPUP USUARIO*/
+    .btns_persona_mod{
+        display: flex;
+        justify-content: center;
+        margin-top: .5rem;
+    }
+    /* SUBMIT BUTTON */
+    #submit_mod{
+        display: flex;
+        padding: .75rem 1rem;
+        outline: none;
+        border: none;
+        background: #039a14;
+        color: #fff;
+        font-size: var(--normal-font-size);
+        border-radius: .3rem;
+        cursor: pointer;
+        transition: .2s;
+        justify-content: center;
+        margin: 0 1rem;
+        align-content: center;
+        justify-content: center;
+    }
+    #submit_mod i{
+        margin-right: .5rem
+    }
+    #submit_mod:hover{
+        background: #09710e;
+    }
+    /* CANCEL BUTTON */
+    #cancel_mod{
+        display: flex;
+    }
+    #delete_persona_mod{
+        background: var(--error-color)
+    }
+    #delete_persona_mod:hover{
+        background: #a20000;
+    }
+
+    #delete_persona_mod i, #submit_mod i{
+        margin-right: .3rem
+    }
+    #register-form #id{
+        display: none;
+    }
+
+    /*ajustes extra popup add user */
+    .modificar_usuario .ajuste_adduser{
+        display: block;
+    }
+
+    /* thumbnail */
+    .row_mod {
+        position: relative;
+        overflow:hidden;
+        border-radius:5rem;
+        -moz-border-radius:0.5em;
+        -webkit-border-radius:0.5em;
+        background: #c9c9c9;
+        width: 50%;
+        margin-right: 2rem;
+        border-radius: 50%;
+        overflow: hidden;
+        max-height: 18rem;
+        box-shadow: .4rem .4rem 0 #c1c1c1;
+        border: .4rem solid white;
+        width: 14rem;
+        height: 14rem;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 1rem;
+    }
+    #datos_usuario_mod{
+        width: 100%;
+    }
+    .file-preview_mod {
+        position: relative;
+        height: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    .file-preview_mod img{
+        position: relative;
+        height: 100%;
+    }
+    .row_mod label {
+        position: absolute;
+        font-weight:bold;
+        z-index: 9999;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--gray-color);
+        cursor: pointer;
+        transition: .3s
+    }
+    .row_mod label:hover{
+        background: rgba( 0, 0, 0, 0.362 )
+    }
+    .over_label_mod{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .over_label_mod i{
+        font-size: 4rem;
+    }
+    .over_label_mod p{
+        font-size: 1.5rem
+    }
+
+
+    /*BOTON CMABIAR CONTRASEÑA*/
+    #change_pass_mod{
+        display: flex;
+        padding: .75rem 1rem;
+        outline: none;
+        border: none;
+        background-color: var(--first-color);
+        color: #fff;
+        font-size: var(--normal-font-size);
+        border-radius: .3rem;
+        cursor: pointer;
+        transition: .2s;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+    #change_pass_mod:hover{
+        background-color: var(--first-color-hover)
+    }
+    #pass_flag{
+        display: none;
+    }
+    
+    .hamb{
+        display: flex;
+        position: fixed;
+        width: 64px;
+        height: 64px;
+        z-index: 9999;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .hamb:hover{
+        background: var(--bg-menu-color)
+    }
+    .hamb p{
+        background: white;
+        height: 4px;
+        margin: 4px 0;
+        color: transparent;
+        width: 35px;
+    }
+    .close_hamb {
+        display: none;
+        position: fixed;
+        width: 64px;
+        height: 64px;
+        z-index: 99999;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .close_hamb:hover{
+        background: #270000;
+    }
+    
+    .close_hamb p{
+        background: white;
+        height: 4px;
+        margin: 4px 0;
+        color: transparent;
+        width: 35px;
+        position: absolute;
+    }
+    
+    .close_hamb p:nth-child(1){
+        transform: rotate(45deg) translate(0px);
+    }
+    .close_hamb p:nth-child(2){
+        transform: rotate(-45deg);
+    }
+  
+}

@@ -1,0 +1,403 @@
+.cont{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.titulo p{
+    text-transform: uppercase;
+    font-weight: 800;
+    text-align: center;
+    color: var(--first-color);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    letter-spacing: 1rem
+}
+.inner{
+    text-align: center
+}
+.graficas{
+    margin-top: -1rem;
+    padding-top: 1rem
+}
+.histo{
+    /*border: 1px solid*/
+}
+.info_general{
+    text-align: center;
+    margin-bottom: .5rem;
+    justify-content: center;
+}
+
+.personas_registradas, .afiliados{
+    padding-right: .5rem;
+    
+}
+.margen{
+    padding-left: .5rem;
+    border-left: 2px solid var(--border-color)
+}
+.info_general div{
+    display: inline-block;
+}
+.total{
+    font-weight: 800;
+    font-size: 3rem;
+    color: var(--first-color);
+}
+.txt{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: .3rem;
+    font-weight: 600;
+    color: var(--bg-menu-color);
+    text-align: left;
+}
+.afi{
+    color: var(--button-color);
+}
+.margen .mujeres{
+    margin-left: .5rem;
+}
+.buscador_seccion{
+    font-size: 1rem;
+    position: relative;
+    margin: 1rem;
+    display: inline-block;
+    text-align: left;
+    padding: 1rem;
+    border-bottom: 2px solid var(--border-color);
+    border-left: 2px solid var(--border-color);
+    vertical-align: top;
+    padding-top: 0;
+    margin-top: 0;
+    width: 50rem
+}
+.form__div{
+    margin-bottom: 0;
+    margin-top: .6rem
+}
+.titulo_datos_filtrados{
+    border-top: 2px dashed var(--border-color);
+    padding-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+.titulo_datos_filtrados h2{
+    text-align: center;
+    
+}
+.control{
+    display: inline-block;
+    position: relative;
+    
+    justify-content: center;
+    align-items: center;
+    
+}
+.form__div {
+    display: inline-block;
+}
+.div__control{
+    display: inline-block;
+    margin-right: .5rem
+}
+#filter__reload{
+    display: inline-block;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    max-width: 3rem;
+    
+}
+#filter__reload i{
+    text-align: center;
+    margin: 0
+}
+#datos_filtrados{
+    text-align: center;
+    margin-top: 1rem;
+}
+#datos_filtrados div{
+    display: inline-block;
+}
+
+
+.label__seccion{
+    background-color: var(--bg-body-color)
+}
+#seccion{
+    max-width: 5rem;
+}
+.colonias_seccion{
+    margin-left: .5rem;
+    margin-top: .5rem;
+}
+#colonias .colonia{
+    display: inline-block;
+    font-weight: 700;
+    color: var(--first-color);
+}
+#colonias .colonia .ciudad{
+    font-weight: 400;
+    color: var(--gray-color);
+}
+#colonia_title{
+    font-size: var(--small-font-size);
+    font-weight: 700;
+    color: var(--gray-color)
+}
+#colonias .fa-solid, #colonias .error_seccion, .filter__error{
+    color: var(--gray-color);
+    display: inline-block;
+    font-weight: 600
+}
+#colonias .error_seccion{
+    margin-left: .3rem
+}
+#datos_filtrados .filter__error{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.filter__error p{
+    font-size: 1.5rem;
+}
+.filter__error i{
+    font-size: 4rem; 
+}
+#colonias .colonia:hover .ciudad,#colonias .colonia:hover, .link_col:hover{
+    color: var(--orange-color)
+}
+
+.gen{
+    margin: .8rem 0rem;
+    padding-left: .5rem;
+    border: 2px solid var(--border-color);
+    position: relative;
+    border-left: 0;
+    border-right: 0;
+}
+.gen .subtitle{
+    position: absolute;
+    top: -.65rem;
+    left: 0;
+    background: var(--bg-body-color);
+    padding-right: .5rem;
+    color: var(--gray-color);
+    font-size: .9rem
+}
+.first{
+    border-left: 0
+}
+
+#resultado_datos_filtrados{
+    text-align: center;    
+}
+.afi_sexo{
+    
+    text-align: center;
+}
+
+/****************************************************************************************/
+/***************                        RESPONSIVE                        ***************/
+/****************************************************************************************/
+@media only screen and (max-width: 900px){
+    .cont{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .titulo p{
+        text-transform: uppercase;
+        font-weight: 800;
+        text-align: center;
+        color: var(--first-color);
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        letter-spacing: 1rem
+    }
+    .inner{
+        text-align: center;
+        position: relative;
+    }
+    .graficas{
+        margin-top: 0rem;
+        padding-top: 0rem;
+        width: 100%;
+    }
+    .info_general{
+        text-align: center;
+        margin-bottom: .5rem;
+        justify-content: center;
+    }
+
+    .personas_registradas, .afiliados{
+        padding-right: .5rem;
+        margin-bottom: .5rem;
+    }
+    .margen{
+        padding-left: .5rem;
+        border-left: 2px solid var(--border-color)
+    }
+    .info_general div{
+        display: inline-block;
+    }
+    .total{
+        font-weight: 800;
+        font-size: 3rem;
+        color: var(--first-color);
+    }
+    .txt{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: .3rem;
+        font-weight: 600;
+        color: var(--bg-menu-color);
+        text-align: left;
+    }
+    .afi{
+        color: var(--button-color);
+    }
+    .margen .mujeres{
+        margin-left: .5rem;
+    }
+    .buscador_seccion{
+        font-size: 1rem;
+        position: relative;
+        margin: 0rem;
+        margin-bottom: 1rem;
+        display: inline-block;
+        text-align: left;
+        padding: 1rem;
+        border-bottom: 2px solid var(--border-color);
+        border-left: 2px solid var(--border-color);
+        vertical-align: top;
+        padding-top: 0;
+        margin-top: 0;
+        width: 100%
+    }
+    .form__div{
+        margin-bottom: 0;
+        margin-top: .6rem
+    }
+    .titulo_datos_filtrados{
+        border-top: 2px dashed var(--border-color);
+        padding-top: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    .titulo_datos_filtrados h2{
+        text-align: center;
+
+    }
+    .control{
+        display: inline-block;
+        position: relative;
+        display: ;
+        justify-content: center;
+        align-items: center;
+
+    }
+    
+    .div__control{
+        display: inline-block;
+        margin-right: 0rem;
+        width: 100%;
+    }
+    .div__seccion{
+        width: 18rem;
+        position: relative;
+    }
+    
+    .div__seccion #seccion_filter{
+        width: 100%;
+    }
+    #filter__reload{
+        display: inline-block;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+
+        margin-top: .5rem;
+    }
+    #filter__reload i{
+        text-align: center;
+        margin: 0
+    }
+    #datos_filtrados{
+        text-align: center;
+        margin-top: 1rem;
+    }
+    #datos_filtrados div{
+        display: inline-block;
+    }
+
+
+    .label__seccion{
+        background-color: var(--bg-body-color)
+    }
+    #seccion{
+        max-width: 5rem;
+    }
+    .colonias_seccion{
+        margin-left: .5rem;
+        margin-top: .5rem;
+    }
+    #colonias .colonia{
+        display: inline-block;
+        font-weight: 700;
+        color: var(--first-color);
+    }
+    #colonias .colonia .ciudad{
+        font-weight: 400;
+        color: var(--gray-color);
+    }
+    #colonia_title{
+        font-size: var(--small-font-size);
+        font-weight: 700;
+        color: var(--gray-color)
+    }
+    #colonias .fa-solid, #colonias .error_seccion, .filter__error{
+        color: var(--gray-color);
+        display: inline-block;
+        font-weight: 600
+    }
+    #colonias .error_seccion{
+        margin-left: .3rem
+    }
+    #datos_filtrados .filter__error{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .filter__error p{
+        font-size: 1.5rem;
+    }
+    .filter__error i{
+        font-size: 4rem; 
+    }
+    #colonias .colonia:hover .ciudad,#colonias .colonia:hover, .link_col:hover{
+        color: var(--orange-color)
+    }
+    
+    .buscador_seccion{
+        font-size: 1rem;
+        position: relative;
+        margin: 0rem;
+        margin-bottom: 1rem;
+        display: inline-block;
+        text-align: left;
+        padding: 1rem;
+        border-bottom: 2px solid var(--border-color);
+        border-left: 2px solid var(--border-color);
+        vertical-align: top;
+        padding-top: 0;
+        margin-top: 0;
+        width: 100%;
+    }
+    
+    .first{
+        border-left: 0;
+    }
+}

@@ -1,0 +1,1019 @@
+.todo .cont{
+    flex-direction: column;
+    position: relative;
+}
+h2{
+    text-align: center;
+}
+/* TIPOS DE USUARIOS */
+.tipos_usuarios{
+    text-align: center;
+}
+.tipos_usuarios .form__button{
+    display: inline-block;
+    width: auto;
+    color: var(--gray-color);
+    background: var(--bg-body-color);
+    border: 1px solid var(--gray-color);
+    margin-bottom: .5rem;
+    margin-right: .5rem
+}
+.tipos_usuarios .form__button:hover{
+    background: var(--orange-color);
+    border: 1px solid var(--orange-color);
+    color: #fff
+}
+.form__label{
+    background: var(--bg-body-color);
+}
+.tipos_usuarios .active{
+    display: inline-block;
+    width: auto;
+    background: var(--first-color);
+    border: 1px solid var(--first-color);
+    color: #fff;
+}
+
+/* LISTA DE USUARIOS */
+.usuarios{
+    display: inline-block;
+    text-align: center;
+    border-top: 1px solid var(--gray-color);
+    margin-top: 1rem;
+    padding-top: 1rem
+}
+.user{
+    display: inline-block;
+    background: #f3f4f6;
+    border-radius: .5rem;
+    overflow: hidden;
+    padding: 1rem;
+    border: 1px solid var(--first-color);
+    max-width: 30rem;
+    width: auto;
+}
+.user:hover{
+    background: rgba( 228, 126, 1, 0.415 );
+    cursor: pointer;
+}
+.flex_user{
+    display: flex;
+    text-align: left;
+}
+.user .foto{
+    width: 5rem;
+    position: relative;
+    margin-right: 1rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5rem;
+    overflow: hidden;
+}
+.user .foto img{
+    width: 100%;
+    
+}
+.usuarios .flex_user .datos_persona{
+    position: relative;
+    margin-bottom: 1rem;
+    margin-right: .4rem;
+    display: inline-block;
+    text-align: left;
+    border: 1px solid var(--firt-color);
+    padding: .4rem .7rem .4rem .4rem;
+    border-radius: .4rem;
+}
+.datos_persona label{
+    position: absolute;
+    left: -1px;
+    top: -.4rem;
+    padding: .1rem .5rem;
+    background: var(--first-color);
+    color: #fff;
+    font-size: var(--small-font-size);
+    font-weight: 600;
+    font-style: normal;
+    border-radius: .2rem;
+}
+.datos_persona p{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: var(--normal-font-size);
+    border-radius: .3rem;
+    outline: none;
+    padding: .4rem .5rem 0rem 0rem;
+    background: none;
+    z-index: 1;
+}
+.info_nivel{
+    min-width: 7rem;
+}
+#info_nombre{
+    font-weight: 700
+}
+/* PAGINADO */
+.pagination{
+    display: inline-block;
+    padding-left: 0;
+    margin: 20px 0;
+    border-radius: 4px;
+    text-align: center;
+    list-style-type: none;
+    
+}    
+.pagina{
+    float: left;    
+    padding: .5rem .7rem;
+    background: #d3d3d3;
+    margin-left: .3rem;
+    color: var(--first-color);
+    border-radius: .3rem
+}
+.active{
+    font-weight: 600;
+    color: #fff;
+    background: var(--first-color);
+}
+.pagina:hover{
+    background: var(--orange-color);
+    cursor: pointer;
+    color: #fff;
+    font-weight: 600;
+}
+
+/***** ERROR EN BUSQUEDA *****/
+.filter__error{
+    color: var(--gray-color);
+    text-align: center;
+    font-weight: 300;
+}
+.filter__error i{
+    font-size: 7rem;
+    color: var(--input-color)
+}
+.filter__error p{
+    font-size: 2rem;
+    margin-bottom: .5rem;
+}
+
+/* SUBMIT BUTTON */
+#submit, #submit_add, #cancel_persona{
+    display: flex;
+    padding: .75rem 1rem;
+    outline: none;
+    border: none;
+    background-color: var(--first-color);
+    color: #fff;
+    font-size: var(--normal-font-size);
+    border-radius: .3rem;
+    cursor: pointer;
+    transition: .2s;
+    justify-content: center;
+}
+#submit:hover, #submit_add:hover{
+    /*box-shadow: 0 0 .5rem rgba( 5, 5, 5, 0.448 );*/
+    background-color: var(--first-color-hover)
+}
+#submit i, #submit_add i, #cancel_persona i{
+    margin-right: .5rem
+}
+
+/*BOTON CMABIAR CONTRASEÑA*/
+#change_pass, delete_persona{
+    display: flex;
+    padding: .75rem 1rem;
+    outline: none;
+    border: none;
+    background-color: var(--first-color);
+    color: #fff;
+    font-size: var(--normal-font-size);
+    border-radius: .3rem;
+    cursor: pointer;
+    transition: .2s;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+#change_pass:hover, #delete_persona:hover{
+    /*box-shadow: 0 0 .5rem rgba( 5, 5, 5, 0.448 );*/
+    background-color: var(--first-color-hover)
+}
+#pass_flag{
+    display: none;
+}
+
+/*POPUP EDITAR USUARIO*/
+.info_persona, .agregar_usuario{
+    position: fixed;
+    display: flex;
+    background: rgba( 0, 0, 0, 0.514 );
+    top: 4rem;
+    left: 12rem;
+    width: calc(100% - 12rem);
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    height: calc(100vh - 4rem);
+    overflow: auto;
+}
+.info_persona .cont_info, .agregar_usuario .cont_agregar{
+    background: var(--bg-body-color);
+    display: inline-block;
+    padding: 1.5rem;
+    position: relative;
+    border-radius: .4rem; 
+    box-shadow: 0 0 .5rem rgba(0,0,0,0.7);
+    width: 60%;
+    max-width: 50rem;
+}
+
+.agregar_usuario{
+    display: block;
+    text-align: center;
+}
+
+.agregar_usuario .cont_agregar{
+    top: 3rem;
+}
+
+.info_persona #close_info, .agregar_usuario #close_info_add{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.5rem;
+    transform: translate(50%, -50%);
+    cursor: pointer;
+    border-radius: 2rem;
+    border: .3rem solid #fff;
+    background-color: #fff;
+    z-index: 99999;
+}
+.info_persona #close_info:hover, .agregar_usuario #close_info_add:hover{
+    color: var(--error-color);
+}
+/*BOTONES POPUP USUARIO*/
+.btns_persona{
+    display: flex;
+    justify-content: center;
+    margin-top: .5rem;
+}
+#submit, #delete_persona, #submit_add, #cancel_persona{
+    display: flex; 
+    margin: 0 1rem;
+    align-content: center;
+    justify-content: center;
+}
+.fa-save{
+    font-size: 
+}
+#submit:hover, #submit_add:hover{
+    background: #09710e;
+}
+#delete_persona:hover{
+    background: #a20000;
+}
+#delete_default, #delete_confirmar, #cancel_add, #cancel_default{
+    display: flex;
+ 
+}
+#cancel_persona {
+	background: #7f7f7f
+}
+#cancel_persona:hover {
+	background: #494949
+}
+#delete_persona i, #submit i, #submit_add a{
+    margin-right: .3rem
+}
+#submit, #submit_add{
+    background: #039a14;
+}
+#delete_persona{
+    background: var(--error-color)
+}
+.fa-square-xmark, .fa-square-check{
+    font-size: 1.5rem;
+    margin-left: .5rem;
+}
+.fa-square-xmark:hover{
+    color: var(--border-color);
+    
+}
+.fa-square-check:hover{
+    color: var(--yellow-color);
+}
+#register-form #id{
+    display: none;
+}
+
+/*ajustes extra popup add user */
+.agregar_usuario .ajuste_adduser{
+    display: flex;
+}
+
+/* thumbnail */
+.row {
+    position: relative;
+    overflow:hidden;
+    border-radius:5rem;
+    -moz-border-radius:0.5em;
+    -webkit-border-radius:0.5em;
+    background: #c9c9c9;
+    width: 50%;
+    margin-right: 2rem;
+    border-radius: 50%;
+    overflow: hidden;
+    max-width: 20rem;
+    max-height: 20rem;
+    box-shadow: .4rem .4rem 0 #c1c1c1;
+    border: .4rem solid white
+}
+#datos_usuario{
+    width: calc(50% - 2rem);
+    text-align: left;
+}
+.file-preview {
+    position: relative;
+    height: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.file-preview img{
+    position: relative;
+    height: 100%;
+}
+.row label {
+    position: absolute;
+    font-weight:bold;
+    z-index: 9999;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--gray-color);
+    cursor: pointer;
+    transition: .3s
+}
+.row label:hover{
+    background: rgba( 0, 0, 0, 0.362 )
+}
+.over_label{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.over_label i{
+    font-size: 4rem;
+}
+.over_label p{
+    font-size: 1.5rem
+}
+/*boton agregar usuario*/
+#add_user{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: .7rem .7rem;
+    background: var(--green-color);
+    transition: .3s
+}
+#add_user:hover {
+	background: #09710e
+}
+#add_user i{
+	margin-right: 0;
+}
+
+/*RESPUESTA POPUP | Usuario agregado, usuario borrado, datos actualizados*/
+.respuesta_popup{
+    background: var(--bg-body-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--green-color);
+    font-weight: 600;
+    font-size: 10rem;
+    border-radius: .4rem; 
+}
+.respuesta_popup p{
+    font-size: 3rem
+}
+#success_delete{
+    color: var(--error-color);
+}
+
+#cont_dems_resp {
+}
+
+.combo_dem_resp{
+    width: 4rem;
+    display: inline-block;
+    margin-right: .5rem;
+}
+
+.label__resp__dems{
+    transition: .2s;
+    color: var(--first-color);
+    font-size: var(--small-font-size);
+    z-index: 10;
+    font-weight: 700;
+    color: var(--gray-color);
+    top: -.5rem;
+    position: relative;
+}
+
+.btns_add_dems{
+    width: 40%;
+    max-height: 8rem;
+}
+.dem__to__coord{
+    display: flex;
+}
+#cont_btns_add_dems{
+    display: flex;
+    justify-content: center;
+}
+#cont_btns_add_dems{
+    margin-top: -.5rem
+}
+#add__dem__to__coord{
+    background: var(--blue-color);
+    margin-right: .5rem;
+}
+#add__dem__to__coord:hover{
+    background: #276573;
+}
+#info_dem{
+    margin-right: 3.5rem;
+}
+#info_mun{
+    margin-right: .5rem;
+}
+
+
+.cont_dems_responsable_add{
+    text-align: left
+}
+
+/*********************************************************************************/
+/*CHECKBOX!!*/
+/* The container */
+.container {
+    display: inline-block;
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-right: 1rem;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.3rem;
+  width: 1.3rem;
+  background-color: #afafaf;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: var(--first-color);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 8px;
+  top: 4px;
+  width: .2rem;
+  height: .5rem;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/****************************************************************************************/
+/***************                        RESPONSIVE                        ***************/
+/****************************************************************************************/
+@media only screen and (max-width: 900px){
+    .todo .cont{
+        flex-direction: column;
+        position: relative;
+    }
+    h2{
+        text-align: center;
+    }
+    /* TIPOS DE USUARIOS */
+    .tipos_usuarios{
+        text-align: center;
+    }
+    .tipos_usuarios .form__button{
+        display: inline-block;
+        width: auto;
+        color: var(--gray-color);
+        background: var(--bg-body-color);
+        border: 1px solid var(--gray-color);
+        margin-bottom: .5rem;
+        margin-right: .5rem
+    }
+    .tipos_usuarios .form__button:hover{
+        background: var(--orange-color);
+        border: 1px solid var(--orange-color);
+        color: #fff
+    }
+    .form__label{
+        background: var(--bg-body-color);
+    }
+    .tipos_usuarios .active{
+        display: inline-block;
+        width: auto;
+        background: var(--first-color);
+        border: 1px solid var(--first-color);
+        color: #fff;
+    }
+
+    /* LISTA DE USUARIOS */
+    .usuarios{
+        display: inline-block;
+        text-align: center;
+        border-top: 1px solid var(--gray-color);
+        margin-top: 1rem;
+        padding-top: 1rem
+    }
+    .user{
+        display: inline-block;
+        background: #f3f4f6;
+        border-radius: .5rem;
+        overflow: hidden;
+        padding: 1rem;
+        border: 1px solid var(--first-color);
+        max-width: 30rem;
+        width: auto;
+    }
+    .user:hover{
+        background: rgba( 228, 126, 1, 0.415 );
+        cursor: pointer;
+    }
+    .flex_user{
+        display: flex;
+        text-align: left;
+    }
+    .user .foto{
+        width: 5rem;
+        position: relative;
+        margin-right: 1rem;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5rem;
+        overflow: hidden;
+    }
+    .user .foto img{
+        width: 100%;
+
+    }
+    .usuarios .flex_user .datos_persona{
+        position: relative;
+        margin-bottom: 1rem;
+        margin-right: .4rem;
+        display: inline-block;
+        text-align: left;
+        border: 1px solid var(--firt-color);
+        padding: .4rem .7rem .4rem .4rem;
+        border-radius: .4rem;
+    }
+    .datos_persona label{
+        position: absolute;
+        left: -1px;
+        top: -.4rem;
+        padding: .1rem .5rem;
+        background: var(--first-color);
+        color: #fff;
+        font-size: var(--small-font-size);
+        font-weight: 600;
+        font-style: normal;
+        border-radius: .2rem;
+    }
+    .datos_persona p{
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        font-size: var(--normal-font-size);
+        border-radius: .3rem;
+        outline: none;
+        padding: .4rem .5rem 0rem 0rem;
+        background: none;
+        z-index: 1;
+    }
+    #editarUsuario .btns_persona{
+        display: block;
+        text-align: center;
+    }
+    #editarUsuario .btns_persona #submit{
+        width: calc(100% - .7rem);
+    }
+    #editarUsuario .btns_persona #submit, #editarUsuario .btns_persona #delete_persona, #editarUsuario .btns_persona #cancel_persona{
+        display: flex;
+        margin: 0.3rem;
+        justify-content: center;
+    }
+    .info_nivel{
+        min-width: 7rem;
+    }
+    #info_nombre{
+        font-weight: 700
+    }
+    /* PAGINADO */
+    .pagination{
+        display: inline-block;
+        padding-left: 0;
+        margin: 20px 0;
+        border-radius: 4px;
+        text-align: center;
+        list-style-type: none;
+
+    }    
+    .pagina{
+        float: left;    
+        padding: .5rem .7rem;
+        background: #d3d3d3;
+        margin-left: .3rem;
+        color: var(--first-color);
+        border-radius: .3rem
+    }
+    .active{
+        font-weight: 600;
+        color: #fff;
+        background: var(--first-color);
+    }
+    .pagina:hover{
+        background: var(--orange-color);
+        cursor: pointer;
+        color: #fff;
+        font-weight: 600;
+    }
+
+    /***** ERROR EN BUSQUEDA *****/
+    .filter__error{
+        color: var(--gray-color);
+        text-align: center;
+        font-weight: 300;
+    }
+    .filter__error i{
+        font-size: 7rem;
+        color: var(--input-color)
+    }
+    .filter__error p{
+        font-size: 2rem;
+        margin-bottom: .5rem;
+    }
+
+    /* SUBMIT BUTTON */
+    #submit, #submit_add, #cancel_persona{
+        display: flex;
+        padding: .75rem 1rem;
+        outline: none;
+        border: none;
+        background-color: var(--first-color);
+        color: #fff;
+        font-size: var(--normal-font-size);
+        border-radius: .3rem;
+        cursor: pointer;
+        transition: .2s;
+        justify-content: center;
+    }
+    #submit:hover, #submit_add:hover{
+        /*box-shadow: 0 0 .5rem rgba( 5, 5, 5, 0.448 );*/
+        background-color: var(--first-color-hover)
+    }
+    #submit i, #submit_add i, #cancel_persona i{
+        margin-right: .5rem
+    }
+
+    /*BOTON CMABIAR CONTRASEÑA*/
+    #change_pass, delete_persona{
+        display: flex;
+        padding: .75rem 1rem;
+        outline: none;
+        border: none;
+        background-color: var(--first-color);
+        color: #fff;
+        font-size: var(--normal-font-size);
+        border-radius: .3rem;
+        cursor: pointer;
+        transition: .2s;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+    #change_pass:hover, #delete_persona:hover{
+        /*box-shadow: 0 0 .5rem rgba( 5, 5, 5, 0.448 );*/
+        background-color: var(--first-color-hover)
+    }
+    #pass_flag{
+        display: none;
+    }
+
+    /*POPUP EDITAR USUARIO*/
+    .info_persona, .agregar_usuario{
+        position: fixed;
+        display: flex;
+        background: rgba( 0, 0, 0, 0.514 );
+        top: 4rem;
+        left: 0rem;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+        height: calc(100vh - 4rem);
+    }
+    .info_persona .cont_info, .agregar_usuario .cont_agregar{
+        background: var(--bg-body-color);
+        display: inline-block;
+        padding: 1.5rem;
+        position: relative;
+        border-radius: .4rem; 
+        box-shadow: 0 0 .5rem rgba(0,0,0,0.7);
+        width: 60%;
+        max-width: 40rem;
+    }
+    
+    .info_persona #close_info, .agregar_usuario #close_info_add{
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 1.5rem;
+        transform: translate(50%, -50%);
+        cursor: pointer;
+        border-radius: 2rem;
+        border: .3rem solid #fff;
+        background-color: #fff;
+        z-index: 99999;
+    }
+    .info_persona #close_info:hover, .agregar_usuario #close_info_add:hover{
+        color: var(--error-color);
+    }
+    /*BOTONES POPUP USUARIO*/
+    .btns_persona{
+        display: flex;
+        justify-content: center;
+        margin-top: .5rem;
+        font-size: 
+    }
+    #submit, #delete_persona, #submit_add, #cancel_persona{
+        display: flex; 
+        margin: 0 1rem;
+        align-content: center;
+        justify-content: center;
+    }
+    .fa-save{
+        font-size: 
+    }
+    #submit:hover, #submit_add:hover{
+        background: #09710e;
+    }
+    #delete_persona:hover{
+        background: #a20000;
+    }
+    #delete_default, #delete_confirmar, #cancel_add, #cancel_default{
+        display: flex;
+
+    }
+    #cancel_persona {
+        background: #7f7f7f
+    }
+    #cancel_persona:hover {
+        background: #494949
+    }
+    #delete_persona i, #submit i, #submit_add a{
+        margin-right: .3rem
+    }
+    #submit, #submit_add{
+        background: #039a14;
+    }
+    #delete_persona{
+        background: var(--error-color)
+    }
+    .fa-square-xmark, .fa-square-check{
+        font-size: 1.5rem;
+        margin-left: .5rem;
+    }
+    .fa-square-xmark:hover{
+        color: var(--border-color);
+
+    }
+    .fa-square-check:hover{
+        color: var(--yellow-color);
+    }
+    #register-form #id{
+        display: none;
+    }
+
+    /*ajustes extra popup add user */
+    .agregar_usuario .ajuste_adduser{
+        display: block;
+    }
+
+    /* thumbnail */
+    .row {
+        position: relative;
+        overflow:hidden;
+        border-radius:5rem;
+        -moz-border-radius:0.5em;
+        -webkit-border-radius:0.5em;
+        background: #c9c9c9;
+        width: 200px;
+        height: 200px;
+        margin-right: 2rem;
+        border-radius: 50%;
+        overflow: hidden;
+        max-height: 18rem;
+        box-shadow: .4rem .4rem 0 #c1c1c1;
+        border: .4rem solid white;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 1rem;
+    }
+    #datos_usuario{
+        width: 100%;
+    }
+    .file-preview {
+        position: relative;
+        height: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    .file-preview img{
+        position: relative;
+        height: 100%;
+    }
+    .row label {
+        position: absolute;
+        font-weight:bold;
+        z-index: 9999;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--gray-color);
+        cursor: pointer;
+        transition: .3s
+    }
+    .row label:hover{
+        background: rgba( 0, 0, 0, 0.362 )
+    }
+    .over_label{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .over_label i{
+        font-size: 4rem;
+    }
+    .over_label p{
+        font-size: 1.5rem
+    }
+    /*boton agregar usuario*/
+    #add_user{
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: .7rem .7rem;
+        background: var(--green-color);
+        transition: .3s
+    }
+    #add_user:hover {
+        background: #09710e
+    }
+    #add_user i{
+        margin-right: 0;
+    }
+
+    /*RESPUESTA POPUP | Usuario agregado, usuario borrado, datos actualizados*/
+    .respuesta_popup{
+        background: var(--bg-body-color);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: var(--green-color);
+        font-weight: 600;
+        font-size: 10rem;
+        border-radius: .4rem; 
+    }
+    .respuesta_popup p{
+        font-size: 3rem
+    }
+    #success_delete{
+        color: var(--error-color);
+    }
+
+    #cont_dems_resp {
+    }
+
+    .combo_dem_resp{
+        width: 4rem;
+        display: inline-block;
+        margin-right: .5rem;
+    }
+
+    .label__resp__dems{
+        transition: .2s;
+        color: var(--first-color);
+        font-size: var(--small-font-size);
+        z-index: 10;
+        font-weight: 700;
+        color: var(--gray-color);
+        top: -.5rem;
+        position: relative;
+    }
+
+    .btns_add_dems{
+        width: 40%;
+        max-height: 8rem;
+    }
+    .dem__to__coord{
+        display: flex;
+    }
+    #cont_btns_add_dems{
+        display: flex;
+        justify-content: center;
+    }
+    #cont_btns_add_dems{
+        margin-top: -.5rem
+    }
+    #add__dem__to__coord{
+        background: var(--blue-color);
+        margin-right: .5rem;
+    }
+    #add__dem__to__coord:hover{
+        background: #276573;
+    }
+    #info_dem{
+        margin-right: 3.5rem;
+    }
+    #info_mun{
+        margin-right: .5rem;
+    }
+}

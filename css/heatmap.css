@@ -1,0 +1,61 @@
+/* 
+ * Always set the map height explicitly to define the size of the div element
+ * that contains the map. 
+ */
+
+/* 
+ * Optional: Makes the sample page fill the window. 
+ */
+
+.cont{
+    width: 100%;
+    position: relative;
+    flex-direction: column;
+}
+.cont_map{
+    position: relative;
+    width: 100%;
+}
+#map{
+    width: 100%;
+    height: 800px;
+}
+#floating-panel {
+    position: absolute;
+    display: flex;
+    left: 25%;
+    z-index: 5;
+    font-family: "Lato", "sans-serif";
+    justify-content: flex-start;
+    top: 0;
+    left: 0;
+}
+
+.button__div{
+    display: flex;
+    padding: .5rem 1rem;
+    margin: .4rem;
+    outline: none;
+    border: none;
+    background-color: var(--orange-color);
+    color: #fff;
+    font-size: var(--normal-font-size);
+    border-radius: .3rem;
+    cursor: pointer;
+    transition: .2s;
+    justify-content: center;
+}
+.button__div:hover{
+    box-shadow: 0 0 .5rem rgba( 5, 5, 5, 0.448 );
+    background-color: #c05824
+}
+.button__div p{
+    color: #f7f7f7;
+}
+
+
+
+/*ocultar controles mapa*/
+.gm-fullscreen-control, .gm-style-cc, .gm-style-mtc{
+    display: none;
+}
